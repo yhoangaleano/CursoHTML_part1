@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crud con LocalStorage - Finca Berriondo</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    
+    body{
+      padding-top: 50px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron row">
+
+      <h2>
+        Finca Berriondo 
+        <small>Gestión de Jornaleros</small>
+      </h2>
+
+      <hr>  
+
+      <div class="col-md-6">
+        <h3>
+          <i class="glyphicon glyphicon-plus"></i>
+          Agregar Jornalero
+        </h3>
+
+        <form>
+
+          <div class="form-group">
+            <label for="txtNombre">
+              Nombre
+            </label>
+            <input class="form-control" type="text" id="txtNombre" name="txtNombre" placeholder="Ejm: Yhoan Galeano">
+          </div>
+
+          <div class="form-group">
+            <label for="txtCorreo">
+              Correo
+            </label>
+            <input class="form-control" type="email" id="txtCorreo" name="txtCorreo" placeholder="Ejm: yhoangaleano@gmail.com">
+          </div>
+
+          <div class="form-group">
+            <label for="txtFechaNacimiento">
+              Fecha Nacimiento
+            </label>
+            <input class="form-control" type="date" id="txtFechaNacimiento" name="txtFechaNacimiento" placeholder="Ejm: 05/07/1993">
+          </div>
+
+          <div class="form-group">
+            <label for="txtPeso">
+              Peso (Kg)
+            </label>
+            <input class="form-control" type="number" id="txtPeso" name="txtPeso" placeholder="Ejm: 69">
+          </div>
+
+          <div class="form-group">
+            <button id="btnGuardar" type="submit" class="btn btn-success">Guardar</button>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="col-md-6">
+        
+        <img src="img/jornalero.jpg" alt="Jornaleros" style="width: 100%;">
+
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        
+        <table id="tblJornaleros" class="table table-hover table-bordered">
+          
+          <thead>
+            <tr class="active">
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Fecha Nacimiento</th>
+              <th>Peso(Kg)</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>1</td>
+              <td>Yhoan Andres Galeano</td>
+              <td>yhoangaleano@gmail.com</td>
+              <td>05/07/1993</td>
+              <td>73</td>
+              <td>
+                <button type="button" class="btn btn-primary">
+                  <i class="glyphicon glyphicon-pencil"></i>
+                </button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-danger">
+                  <i class="glyphicon glyphicon-trash"></i>
+                </button>
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
